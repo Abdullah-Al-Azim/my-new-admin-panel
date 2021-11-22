@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: "poppins", sans-serif;
+}
+/* variables */
+
+:root {
+    --white: #fff;
+    --black: #000;
+}
+
+/* nav bar */
+.nav_____bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+    padding: 15px;
+}
+.nav_____bar p{
+    color: var(--white);
+    font-size: 25px;
+    text-align: center;
+}
+.transparent{
+    color: transparent;
+}
+.dashboard{
+    letter-spacing: 2px;
+}
+/* side bar */
+.sidebar_____container{
+    flex-direction: column;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 20%;
+    height: 100vh;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all 0.4s ease-in-out;
+    background-color: var(--black);
+}
+.sidebar_______list ul li{
+    display: flex;
+    align-items: center;
+    color: var(--white);
+}
+.sidebar_______list ul li p{
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+.sidebar_______list ul li a{
+    text-decoration: none;
+    color: var(--white);
+}
+.close____btn{
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    cursor: pointer;
+}
+.sidebar_____container.show_____menu {
+    left: 0;
+    /* z-index: 9999; */
+  }
+#hamburger_________id{
+    cursor: pointer;
+}
+.admin____overlay{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.admin____overlay.show__adminOverlay {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.itnastore{
+    border-bottom: 1px solid var(--white);
+    padding: 12px;
+}
+.accor_____btn{
+    background-color: var(--black) !important;
+    color: var(--white) !important;
+    box-shadow: none !important;
+    padding: 0rem 0.2rem !important;
+}
+.accor____item{
+    background-color: var(--black) !important;
+    border: none !important;
+}
+.accor_____btn:not(.collapsed){
+    box-shadow: none !important;
+}
+.accor_____btn::after{
+    margin-left: 33px !important;
+}
+.accor____body ul li a{
+    text-decoration: none;
+    color: var(--white);
+}
+.accor____body ul li{
+    border-bottom: 1px solid var(--white);
+}
